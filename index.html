@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Links oficiales de Zia Rose: musica, videos, redes sociales y contacto."
+      content="Links oficiales de Zia Rose: musica, videos y redes sociales."
     />
-    <title>Zia Rose | Blues Singer</title>
+    <title>Zia Rose | Official Links</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,21 +19,27 @@
   <body>
     <main class="page">
       <header class="hero" aria-label="Perfil de Zia Rose">
-        <div class="hero-content">
-          <div class="avatar" aria-hidden="true">ZR</div>
+        <picture class="hero-photo">
+          <source srcset="zia-rose-artist-mobile.webp" type="image/webp" />
+          <img src="zia-rose-artist.png" alt="Zia Rose con microfono de escenario" />
+        </picture>
+
+        <div class="hero-overlay">
           <p class="eyebrow">Blues / Soul / Jazz</p>
           <h1>Zia Rose</h1>
           <p class="bio">
-            Voz elegante, blues nocturno y alma de escenario. Musica, videos,
-            redes y contacto oficial.
+            Voz elegante, blues nocturno y alma de escenario. Escucha su musica
+            y sigue sus redes oficiales.
           </p>
         </div>
       </header>
 
-      <section class="featured" aria-label="Lanzamiento destacado">
-        <p class="tag">Ahora sonando</p>
-        <h2>Ultimo single de Zia Rose</h2>
-        <p>Dale al play y escucha el ultimo lanzamiento directamente aqui.</p>
+      <section class="now-playing" aria-label="Ultimo single">
+        <div class="section-head">
+          <p class="tag">Ahora sonando</p>
+          <h2>Ultimo single</h2>
+        </div>
+
         <div class="video-box">
           <iframe
             src="https://www.youtube.com/embed/cCuiNj2EPTs"
@@ -42,6 +48,7 @@
             allowfullscreen>
           </iframe>
         </div>
+
         <a class="primary-link" href="https://open.spotify.com/" target="_blank" rel="noreferrer">
           <span class="icon music-icon" aria-hidden="true">&#9834;</span>
           <span>Escuchar ahora</span>
@@ -92,7 +99,7 @@
       </nav>
 
       <section class="share">
-        <button id="copyButton" type="button">Copiar enlace de esta pagina</button>
+        <button id="copyButton" type="button">Copiar enlace</button>
         <p id="copyStatus" role="status" aria-live="polite"></p>
       </section>
     </main>
