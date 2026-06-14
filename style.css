@@ -1,0 +1,189 @@
+:root {
+  color-scheme: dark;
+  --bg: #110b12;
+  --panel: rgba(255, 255, 255, 0.08);
+  --panel-strong: rgba(255, 255, 255, 0.14);
+  --text: #fff8fb;
+  --muted: #d7c8d0;
+  --accent: #ff4f9a;
+  --accent-2: #ffb347;
+  --shadow: rgba(0, 0, 0, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 79, 154, 0.28), transparent 34rem),
+    linear-gradient(150deg, #110b12 0%, #251127 52%, #150c16 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(100%, 520px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 30px 18px 26px;
+}
+
+.profile {
+  text-align: center;
+  padding: 12px 6px 18px;
+}
+
+.avatar {
+  display: grid;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.42);
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 18px 40px var(--shadow);
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow,
+.tag {
+  margin: 0;
+  color: var(--accent-2);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: clamp(2.35rem, 12vw, 4.1rem);
+  line-height: 0.92;
+}
+
+.bio {
+  max-width: 26rem;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.featured {
+  margin: 8px 0 16px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: 0 18px 44px var(--shadow);
+}
+
+.featured h2 {
+  margin: 8px 0 8px;
+  font-size: 1.28rem;
+}
+
+.featured p:not(.tag) {
+  margin-bottom: 14px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.primary-link,
+.links a,
+.share button {
+  min-height: 56px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.primary-link {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #170912;
+  box-shadow: 0 16px 32px rgba(255, 79, 154, 0.22);
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--panel);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  border-color: rgba(255, 255, 255, 0.34);
+  background: var(--panel-strong);
+  transform: translateY(-2px);
+}
+
+.links span {
+  font-size: 1.02rem;
+}
+
+.links small {
+  color: var(--muted);
+  font-weight: 600;
+  text-align: right;
+}
+
+.share {
+  padding-top: 18px;
+  text-align: center;
+}
+
+.share button {
+  width: 100%;
+  border: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1c1019;
+  cursor: pointer;
+}
+
+.share p {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 380px) {
+  .links a {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .links small {
+    text-align: left;
+  }
+}
