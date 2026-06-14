@@ -1,13 +1,14 @@
 :root {
   color-scheme: dark;
-  --bg: #110b12;
-  --panel: rgba(255, 255, 255, 0.08);
-  --panel-strong: rgba(255, 255, 255, 0.14);
-  --text: #fff8fb;
-  --muted: #d7c8d0;
-  --accent: #ff4f9a;
-  --accent-2: #ffb347;
-  --shadow: rgba(0, 0, 0, 0.32);
+  --bg: #09080a;
+  --panel: rgba(24, 18, 19, 0.78);
+  --panel-strong: rgba(44, 30, 30, 0.88);
+  --text: #fff7ef;
+  --muted: #d7c9bb;
+  --accent: #b11d3f;
+  --accent-2: #d9a24c;
+  --line: rgba(255, 222, 169, 0.2);
+  --shadow: rgba(0, 0, 0, 0.46);
 }
 
 * {
@@ -20,8 +21,9 @@ body {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 79, 154, 0.28), transparent 34rem),
-    linear-gradient(150deg, #110b12 0%, #251127 52%, #150c16 100%);
+    radial-gradient(circle at top, rgba(217, 162, 76, 0.16), transparent 25rem),
+    radial-gradient(circle at 50% 34rem, rgba(177, 29, 63, 0.22), transparent 22rem),
+    linear-gradient(180deg, #050909 0%, #12090d 54%, #070607 100%);
 }
 
 a {
@@ -33,27 +35,57 @@ a {
   width: min(100%, 520px);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 30px 18px 26px;
+  padding: 16px 14px 26px;
 }
 
-.profile {
+.hero {
+  position: relative;
+  min-height: 580px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background-image:
+    linear-gradient(180deg, rgba(3, 7, 7, 0.03) 0%, rgba(5, 6, 7, 0.08) 42%, rgba(7, 6, 7, 0.9) 82%, #09080a 100%),
+    url("assets/zia-rose-artist.png");
+  background-position: center top;
+  background-size: cover;
+  box-shadow: 0 24px 60px var(--shadow);
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.38), transparent 32%, rgba(0, 0, 0, 0.22)),
+    radial-gradient(circle at 50% 21%, transparent 0 13rem, rgba(0, 0, 0, 0.2) 27rem);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  min-height: 580px;
+  flex-direction: column;
+  justify-content: flex-end;
   text-align: center;
-  padding: 12px 6px 18px;
+  padding: 360px 18px 24px;
 }
 
 .avatar {
   display: grid;
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 16px;
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 12px;
   place-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 226, 185, 0.62);
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  box-shadow: 0 18px 40px var(--shadow);
-  font-size: 2rem;
+  background: linear-gradient(135deg, rgba(177, 29, 63, 0.88), rgba(217, 162, 76, 0.92));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  color: #16080d;
+  font-size: 1.65rem;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
 .eyebrow,
@@ -62,7 +94,7 @@ a {
   color: var(--accent-2);
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
@@ -74,25 +106,30 @@ p {
 
 h1 {
   margin-bottom: 10px;
-  font-size: clamp(2.35rem, 12vw, 4.1rem);
-  line-height: 0.92;
+  font-size: clamp(3.1rem, 17vw, 5.6rem);
+  line-height: 0.84;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.7);
 }
 
 .bio {
-  max-width: 26rem;
+  max-width: 24rem;
   margin: 0 auto;
-  color: var(--muted);
+  color: #f2e3d4;
   font-size: 1rem;
   line-height: 1.55;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.9);
 }
 
 .featured {
-  margin: 8px 0 16px;
+  margin: 14px 0 14px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel);
+  background:
+    linear-gradient(135deg, rgba(177, 29, 63, 0.2), transparent 46%),
+    var(--panel);
   box-shadow: 0 18px 44px var(--shadow);
+  backdrop-filter: blur(14px);
 }
 
 .featured h2 {
@@ -118,8 +155,8 @@ h1 {
   display: grid;
   place-items: center;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #170912;
-  box-shadow: 0 16px 32px rgba(255, 79, 154, 0.22);
+  color: #14070a;
+  box-shadow: 0 16px 32px rgba(177, 29, 63, 0.24);
 }
 
 .links {
@@ -133,15 +170,16 @@ h1 {
   justify-content: space-between;
   gap: 16px;
   padding: 13px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--line);
   background: var(--panel);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
 }
 
 .links a:hover,
 .links a:focus-visible {
-  border-color: rgba(255, 255, 255, 0.34);
+  border-color: rgba(217, 162, 76, 0.52);
   background: var(--panel-strong);
   transform: translateY(-2px);
 }
@@ -164,8 +202,8 @@ h1 {
 .share button {
   width: 100%;
   border: 0;
-  background: rgba(255, 255, 255, 0.92);
-  color: #1c1019;
+  background: rgba(255, 247, 239, 0.93);
+  color: #16080d;
   cursor: pointer;
 }
 
@@ -177,6 +215,15 @@ h1 {
 }
 
 @media (max-width: 380px) {
+  .hero,
+  .hero-content {
+    min-height: 530px;
+  }
+
+  .hero-content {
+    padding-top: 315px;
+  }
+
   .links a {
     align-items: flex-start;
     flex-direction: column;
