@@ -12,12 +12,12 @@ COMO CAMBIAR LOS ENLACES
 
 Abre index.html y busca los enlaces que empiezan por:
 
-https://open.spotify.com/
-https://www.youtube.com/
-https://www.instagram.com/
-https://www.tiktok.com/
-https://music.apple.com/
-https://wa.me/34000000000
+https://open.spotify.com/intl-es/artist/0itGmWAT4Ez8clL1SAAIkz
+https://www.youtube.com/@ZiaRoseOfficial
+https://www.instagram.com/ziarose_official?igsh=MWZ4dzdoam9uczZ6Zw==
+https://www.tiktok.com/@ziarose_official?_r=1&_t=ZG-97DMLcDUlnd
+https://music.apple.com/es/artist/zia-rose/1878678487
+
 
 Sustituyelos por los enlaces reales de Zia Rose.
 
