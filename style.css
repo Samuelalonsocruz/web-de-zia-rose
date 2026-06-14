@@ -286,6 +286,10 @@ h1 {
   color: #111111;
 }
 
+.facebook .icon {
+  background: linear-gradient(135deg, #1877f2, #0b3d91);
+}
+
 .link-copy > span {
   font-size: 1rem;
 }
